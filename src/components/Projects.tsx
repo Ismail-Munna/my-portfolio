@@ -44,27 +44,15 @@ export default function Projects() {
               transition={{ duration: 0.6 }}
               className="bg-dark-bg border border-accent/20 rounded-[2.5rem] p-6 md:p-10 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center"
             >
-              {/* Project Image placeholder / Visual representation */}
-              <div className="bg-[#111] border border-dark-border rounded-3xl p-4 md:p-6 aspect-[16/10] relative flex items-center justify-center overflow-hidden group w-full">
-                <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                <div className="w-full h-full border border-dark-border/50 rounded-2xl bg-[#050505] flex flex-col p-4 md:p-6 shadow-2xl relative z-10 transform group-hover:scale-[1.02] transition-transform duration-500">
-                   {/* Mock abstract UI representation since we don't have images */}
-                   <div className="flex items-center gap-2 mb-4 md:mb-6 pb-3 md:pb-4 border-b border-dark-border/50">
-                     <div className="flex gap-1.5">
-                       <div className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-red-500/50"></div>
-                       <div className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-yellow-500/50"></div>
-                       <div className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-green-500/50"></div>
-                     </div>
-                     <div className="ml-2 md:ml-4 text-[8px] md:text-[10px] font-mono text-gray-500 bg-dark-card px-2 py-1 rounded border border-dark-border/50">
-                       {project.title.toLowerCase().replace(' ', '-')}.app
-                     </div>
-                   </div>
-                   
-                   <div className="flex-1 flex flex-col justify-center items-center text-center">
-                     <Code2 size={32} className="text-accent/20 mb-3 md:mb-4" />
-                     <h3 className="text-xl md:text-2xl font-bold uppercase tracking-wider text-gray-300">{project.title}</h3>
-                     <p className="text-[10px] font-mono text-accent mt-2 uppercase tracking-widest">{project.category}</p>
-                   </div>
+              {/* মক টেক্সট এর পরিবর্তে এখানে আপনার আসল প্রজেক্টের ইমেজ যোগ করা হয়েছে */}
+              <div className="bg-[#111] border border-dark-border rounded-3xl p-2 md:p-3 aspect-[16/10] relative flex items-center justify-center overflow-hidden group w-full">
+                <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-20"></div>
+                <div className="w-full h-full border border-dark-border/50 rounded-2xl overflow-hidden shadow-2xl relative z-10 transform group-hover:scale-[1.02] transition-transform duration-500">
+                   <img 
+                     src={project.image} 
+                     alt={project.title} 
+                     className="w-full h-full object-cover"
+                   />
                 </div>
               </div>
               
@@ -134,25 +122,15 @@ export default function Projects() {
               </button>
 
               <div className="flex flex-col gap-12">
-                {/* Top Section - Large Visual */}
-                <div className="bg-[#111] border border-dark-border rounded-3xl p-4 md:p-8 aspect-[16/7] md:aspect-[21/9] relative flex items-center justify-center overflow-hidden w-full">
-                  <div className="absolute inset-0 bg-accent/5 pointer-events-none"></div>
-                  <div className="w-full h-full border border-dark-border/50 rounded-2xl bg-[#050505] flex flex-col p-4 md:p-8 shadow-2xl relative z-10">
-                     <div className="flex items-center gap-2 mb-4 md:mb-6 pb-3 md:pb-4 border-b border-dark-border/50">
-                       <div className="flex gap-1.5">
-                         <div className="w-2.5 h-2.5 rounded-full bg-red-500/50"></div>
-                         <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/50"></div>
-                         <div className="w-2.5 h-2.5 rounded-full bg-green-500/50"></div>
-                       </div>
-                       <div className="ml-4 text-[10px] font-mono text-gray-500 bg-dark-card px-2 py-1 rounded border border-dark-border/50">
-                         {activeProject.title.toLowerCase().replace(' ', '-')}.app
-                       </div>
-                     </div>
-                     <div className="flex-1 flex flex-col justify-center items-center text-center">
-                       <Code2 size={48} className="text-accent/20 mb-6" />
-                       <h3 className="text-3xl md:text-5xl font-black uppercase tracking-wider text-gray-300">{activeProject.title}</h3>
-                       <p className="text-xs font-mono text-accent mt-4 uppercase tracking-widest">{activeProject.category}</p>
-                     </div>
+                {/* মোডাল বা ডিটেইলস পপআপের ভেতরেও মকের বদলে ইমেজ বসানো হলো */}
+                <div className="bg-[#111] border border-dark-border rounded-3xl p-2 md:p-4 aspect-[16/7] md:aspect-[21/9] relative flex items-center justify-center overflow-hidden w-full">
+                  <div className="absolute inset-0 bg-accent/5 pointer-events-none z-20"></div>
+                  <div className="w-full h-full border border-dark-border/50 rounded-2xl overflow-hidden shadow-2xl relative z-10">
+                     <img 
+                       src={activeProject.image} 
+                       alt={activeProject.title} 
+                       className="w-full h-full object-cover"
+                     />
                   </div>
                 </div>
 

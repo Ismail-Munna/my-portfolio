@@ -7,6 +7,10 @@ import {
   Terminal,
 } from 'lucide-react';
 
+// ইমেজ দুটি এখানে ইম্পোর্ট করা হলো
+import pic2 from './assets/pic-2.png';
+import pic3 from './assets/pic-3.png';
+
 export const personalInfo = {
   name: 'Ismail Hossain Munna',
   role: 'Full Stack Developer',
@@ -75,6 +79,7 @@ export const projects = [
     id: 1,
     title: 'Eco Platform',
     category: 'Full Stack Web Application',
+    image: pic2, // এখানে pic-2 সেট করা হলো
     description: 'A comprehensive eco-friendly platform. It features user authentication, a dynamic dashboard, and real-time data updates to manage eco-related activities.',
     techStack: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
     liveLink: 'https://chimerical-medovik-63b5cf.netlify.app/',
@@ -86,6 +91,7 @@ export const projects = [
     id: 2,
     title: 'Club Sphere',
     category: 'Community Management System',
+    image: pic3, // এখানে pic-3 সেট করা হলো
     description: 'A platform designed to manage club activities, memberships, and events. Includes features for role-based access control and event scheduling.',
     techStack: ['React', 'Firebase', 'Express', 'Node.js'],
     liveLink: 'https://gamy-attention.surge.sh/',
