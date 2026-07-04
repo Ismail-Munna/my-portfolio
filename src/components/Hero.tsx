@@ -1,6 +1,9 @@
-import { motion } from 'framer-motion'; // এখানে পরিবর্তন করা হয়েছে
+import { motion } from 'motion/react';
 import { personalInfo } from '../data';
 import { Github, Linkedin, ArrowRight, Download } from 'lucide-react';
+// এখানে আপনার ইমেজটি ইম্পোর্ট করা হলো
+
+import pic1 from '../assets/pic-1.jpeg';
 
 export default function Hero() {
   return (
@@ -49,10 +52,8 @@ export default function Hero() {
             >
               Let's Build <span className="w-2 h-2 rounded-full bg-gray-400 ml-1"></span>
             </a>
-            {/* এখানে আপনি চাইলে আপনার resume.pdf যোগ করতে পারেন */}
             <a 
-              href="/resume.pdf" 
-              download
+              href="#" 
               className="bg-dark-card border border-dark-border hover:border-gray-500 text-gray-400 hover:text-white px-8 py-3 rounded-full text-sm font-bold uppercase tracking-wide flex items-center gap-2 transition-colors"
             >
               <Download size={16} /> Resume
@@ -81,8 +82,12 @@ export default function Hero() {
             
             {/* Grayscale Treatment Photo Container */}
             <div className="w-full h-full bg-zinc-800 rounded-[1.5rem] overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-500">
-               {/* এখানে আপনার ইমেজ ট্যাগটি বসাতে ভুলবেন না, যেমন: */}
-               {/* <img src={HeroImage} alt={personalInfo.name} className="w-full h-full object-cover" /> */}
+              {/* নিচে এখানে নতুন ইমেজ ট্যাগটি বসানো হয়েছে */}
+              <img 
+                src={pic1} 
+                alt={personalInfo.name} 
+                className="w-full h-full object-cover" 
+              />
             </div>
 
             <div className="absolute bottom-6 left-6 right-6 z-20 bg-dark-bg/60 backdrop-blur-md border border-dark-border rounded-xl p-4 flex items-center justify-between">
